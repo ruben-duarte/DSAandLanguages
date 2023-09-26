@@ -41,24 +41,48 @@ class Array01:
             self.index += 1
         else:
             print("Index out of range")
-            
 
-array_1 = Array01(3)
-print(array_1)
-array_1.__fill__()
-print(array_1)
-print("sum: ", array_1.__sum__())
-print("sum: ", array_1.__add_items__())
+    def insert_at(self, value, ubication):
+        pointer = 0
+        #check if index is occupied
+        if self.items[ubication] != None:
+        #if true , move the consecutive items to the next position and insert the value            
+            for item in range(len(self.items)):
+                if self.items[item] is None:
+                    pointer = item
+                    break
+            for item in range(pointer , ubication , -1):
+                self.items[item] = self.items[item-1]
+            self.items[ubication] = value
+        # else insert in the position of index
+        else:
+           pass
 
-array_test = Array01(4)
-print(array_test)
-array_test.insert(10)
-array_test.insert(20)
-print(array_test)
-array_test.insert(30)
-array_test.insert(40)
-print(array_test)
-array_test.insert(50)
-print(array_test)
+# array_1 = Array01(3)
+# print(array_1)
+# array_1.__fill__()
+# print(array_1)
+# print("sum: ", array_1.__sum__())
+# print("sum: ", array_1.__add_items__())
 
+# array_test = Array01(4)
+# print(array_test)
+# array_test.insert(10)
+# array_test.insert(20)
+# print(array_test)
+# array_test.insert(30)
+# array_test.insert(40)
+# print(array_test)
+# array_test.insert(50)
+# print(array_test)
 
+insert_array = Array01(8)
+print(insert_array)
+insert_array.insert(34)
+insert_array.insert(23)
+insert_array.insert(12)
+insert_array.insert(120)
+insert_array.insert(-5)
+print(insert_array)
+print(insert_array.insert_at(23,1))
+print(insert_array)
