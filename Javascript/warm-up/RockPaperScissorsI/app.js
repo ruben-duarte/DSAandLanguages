@@ -5,6 +5,7 @@ let userOption
 let computerOption
 let result
 
+//first solution
 const possibleChoices = document.querySelectorAll('button')
 
 possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
