@@ -1,6 +1,8 @@
 import pygame
 from pygame.locals import *  #import global variables
 
+# palette colors https://coolors.co/353535-3c6e71-ffffff-d9d9d9-284b63
+
 def draw_block():
     surface.fill((40,75,99))
     surface.blit(block, (block_x,block_y))
@@ -12,7 +14,8 @@ if __name__ == '__main__':
     surface = pygame.display.set_mode((700,500))
     surface.fill((40,75,99))
 
-    block = pygame.image.load("./images/block.png").convert()
+    #block = pygame.image.load("./images/block.png").convert()
+    block = pygame.image.load("./images/block2.png").convert()
     block_x, block_y = 100,100
     surface.blit(block, (block_x,block_y))
 

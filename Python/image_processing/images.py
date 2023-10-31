@@ -23,7 +23,7 @@ for filename in os.listdir(initial_folder):
     print("all done")
 
 
-img = Image.open(os.path.join('G:\portafolio\\12a_DataStructuresAndAlgorithms\Python\image_processing\project1\monetpainting1.jpg'))
+# img = Image.open(os.path.join('G:\portafolio\\12a_DataStructuresAndAlgorithms\Python\image_processing\project1\monetpainting1.jpg'))
 
 
 
