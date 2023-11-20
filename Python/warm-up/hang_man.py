@@ -1,4 +1,10 @@
-word = "secret"
+import random
+
+
+with open ('Python/warm-up/words_game.txt', 'r') as file:
+    words = file.readlines()
+    
+word = random.choice(words)[ : -1]
 
 allowed_errors = 5
 guesses = []
@@ -9,11 +15,11 @@ while not done:
         if letter.lower() in guesses:
             print(letter, end='  ')
         else:
-            print('__', end='  ')
+            print('_', end='  ')
     print() 
     print()
 
-    guess = input(f"Allowed errors {allowed_errors}.  write next guess: ")
+    guess = input(f"Allowed errors {allowed_errors}.  write your next guess: ")
     guesses.append(guess.lower())
     if guess.lower() not in word.lower():
         allowed_errors -= 1
